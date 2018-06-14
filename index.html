@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>POP-UP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/pop-up.css" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                height: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pop-up">
+            <span class="closing-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                    <path d="M7,5.6,1.4,0,0,1.4,5.6,7,0,12.6,1.4,14,7,8.4,12.6,14,14,12.6,8.4,7,14,1.4,12.6,0Z"/>
+                </svg>
+            </span>
+            <p class="title"></p>
+            <div class="additory-container">
+                <div>
+                    <span class="copy-button">Скопировать email</span>
+                </div>
+                <div>
+                    <a href="#" target="_blank">Профиль</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/basic-functions.js"></script>
+        <script src="js/pop-up.js"></script>
+        <script>
+            window.onload = function() {
+                var data = {name: "PROVODNIK UA", id: 781, email: "mikhail_dumchev@ukr.net"};
+                popUpWindow.Element(document.getElementsByClassName("pop-up")[0]);
+                popUpWindow.initialize();
+                popUpWindow.Data(data);
+                popUpWindow.show();
+            };
+        </script>
+    </body>
+</html>
